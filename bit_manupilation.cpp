@@ -10,6 +10,15 @@ int countSetBits(int n) {
     }
     return count;
 }
+//method 2 - to count set bits(1s) in a number 
+int countSetBitsHack(int n) {
+    int ans = 0;
+    while(n) { // same as n>0
+        n = n & (n-1); // clear last set bit(1 -> 0) in the number
+        ans++;
+    }
+    return ans;
+}
 // check a number is even or not
 bool checkEvenOdd(int n) {
     return (n&1) ? true : false; // (3&1) == 1
