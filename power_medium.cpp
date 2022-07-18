@@ -14,3 +14,22 @@ public:
         return (n>0) ? ans : (1/ans);
     }
 };
+//method 2 - log(n)
+#include <bits/stdc++.h>
+using namespace std;
+int fastPow(int m,int n) {
+    if(n==0)
+        return 1;
+    int ans = fastPow(m,n/2);
+    int subans = ans*ans;
+    if(n&1)
+     return m*subans;
+    else 
+        return subans;
+}
+int main()
+{
+    cout<<fastPow(2,4);
+
+    return 0;
+}
