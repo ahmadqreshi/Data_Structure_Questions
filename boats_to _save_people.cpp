@@ -23,3 +23,29 @@ public:
         return count;
     }
 };
+//method 2  by using simple thinking 
+class Solution {
+public:
+    int numRescueBoats(vector<int>& arr, int limit) {
+        sort(arr.begin(),arr.end());
+        int count = 0;
+        int i = 0;
+        int j = arr.size()-1;
+        while(i<=j) {
+            int sum = arr[i] + arr[j];
+            if(sum < limit) { // here both person will go in one boat 
+                count++;
+                i++;
+                j--;
+            }else if(sum > limit) {// here also one person will go who is heaviest
+                count++;
+                j--;
+            }else { // here both person will go because their weights are equal
+                count++;
+                i++;
+                j--;
+            }
+        }
+        return count;
+    }
+};
