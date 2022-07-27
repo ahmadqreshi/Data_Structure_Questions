@@ -46,6 +46,7 @@ void nQueenSolver(vector<vector<char>> &board,int i,int n) {
             board[i][j] = '.';
         }
     }
+    return; // can print output correctly if not return too
 }
 int main()
 {
