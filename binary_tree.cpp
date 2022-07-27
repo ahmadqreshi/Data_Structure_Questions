@@ -1,3 +1,4 @@
+//A binary tree is a tree that can have atmost 2 childrens 
 #include <iostream>
 #define newLine cout<<endl
 #define print cout<<
