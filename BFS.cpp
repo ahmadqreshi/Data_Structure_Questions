@@ -1,7 +1,9 @@
 /*
 GRAPH TRAVERSAL
 1) BFS - Breadth first search :- iterative algorithm to cover each node in the Graph
-2) DFS - depth first search :
+2) DFS - depth first search : recursive algorithm to cover each node in the graph
+
+Both traversing algorithm has linear time complexity O(V+E)
 */
 #include<bits/stdc++.h>
 using namespace std;
