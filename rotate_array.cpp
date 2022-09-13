@@ -1,4 +1,15 @@
 //method 1 - by using while and for loop
+void rotateArray(int *arr,int n,int d) {
+   while(d > 0) {
+       int last = arr[n-1];
+       for(int i=n-1;i>0;i--) {
+           arr[i] = arr[i-1];
+       }
+       arr[0] = last;
+       d--;
+   }
+   
+}
 //Time Complexity - O(n*d)
 //Space Complexity - O(1)
 
